@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVON Agent Academy | Panduan Ejen, Komisen & Recruitment</title>
+    <meta name="description" content="Panduan lengkap ejen MOVON Malaysia. Kenali produk, fahami pelan komisen, kira potensi pendapatan dan pelajari teknik jualan serta recruitment.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="MOVON Agent Academy | Panduan Ejen & Recruitment">
+    <meta property="og:description" content="Bina pendapatan 4-5 angka bersama MOVON Malaysia. Belajar percuma, latihan disediakan, pelan komisen telus.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#071426',
+                            light: '#0f2442',
+                            card: '#0c1b30'
+                        },
+                        movon: {
+                            blue: '#1769FF',
+                            hover: '#0052e0',
+                            light: '#e8f0ff',
+                            dark: '#0e46b3'
+                        },
+                        silver: '#E2E8F0'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles & Utilities */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #071426;
+            color: #F4F6FA;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1769FF 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(15, 36, 66, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(23, 105, 255, 0.4);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #071426;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1769FF;
+            border-radius: 4px;
+        }
+        /* Dynamic Tab Active Styles */
+        .tab-btn.active {
+            background-color: #1769FF;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-navy text-slate-100 antialiased custom-scrollbar">
+
+    <!-- GLOBAL CONFIGURATION INITIALIZER -->
+    <script>
+        // Centralized App Configuration Data
+        const APP_CONFIG = {
+            WHATSAPP_NUMBER: "60123456789", // GANTIKAN_DENGAN_NOMBOR_SEBENAR
+            REGISTRATION_URL: "https://ejenmovon.com/register", // GANTIKAN_DENGAN_LINK_PENDAFTARAN_SEBENAR
+            TEAM_NAME: "MOVON Elite Squad", // GANTIKAN_DENGAN_NAMA_PASUKAN
+            LAST_UPDATED: "1 Oktober 2026",
+            IS_HQ: false // Default false - Team Landing Page
+        };
+
+        // Standardized Commission & Campaign Rates (October - December 2026)
+        const COMMISSION_RATES = {
+            RENTAL: {
+                MOVON: 230,
+                CUCKOO: 100
+            },
+            OUTRIGHT: {
+                MOVON: 280,
+                CUCKOO: 100
+            },
+            VACUUM_OUTRIGHT: [
+                { min: 1, max: 9, rate: 300 },
+                { min: 10, max: 19, rate: 320 },
+                { min: 20, max: Infinity, rate: 350 }
+            ],
+            STAR_BUILDER: [
+                { minUnits: 10, reward: 500 },
+                { minUnits: 20, reward: 1500 },
+                { minUnits: 30, reward: 3000 },
+                { minUnits: 40, reward: 4500 },
+                { minUnits: 50, reward: 6000 }
+            ],
+            MIN_PERSONAL_SALES_FOR_BUILDER: 5,
+            COLLECTION_COMMISSION_PCT: 0.01, // 1%
+            Q4_2026_MOMENTUM_DUO: [
+                { minUnits: 10, reward: 1000 },
+                { minUnits: 20, reward: 3000 },
+                { minUnits: 30, reward: 4000 },
+                { minUnits: 40, reward: 5000 },
+                { minUnits: 50, reward: 7500 }
+            ],
+            Q4_2026_BOOSTER: [
+                { minUnits: 5, reward: 1200 },
+                { minUnits: 10, reward: 1800 },
+                { minUnits: 15, reward: 3700 }
+            ]
+        };
+    </script>
+
+    <!-- STICKY TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-navy/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-movon-blue to-blue-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-movon-blue/30">
+                    M
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">MOVON</span>
+                    <span class="text-xs font-semibold text-movon-blue tracking-widest uppercase">Agent Academy</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#kelebihan" class="hover:text-movon-blue transition-colors">Kenapa MOVON</a>
+                <a href="#produk" class="hover:text-movon-blue transition-colors">Produk</a>
+                <a href="#komisen" class="hover:text-movon-blue transition-colors">Pelan Komisen</a>
+                <a href="#kalkulator" class="hover:text-movon-blue transition-colors">Kalkulator</a>
+                <a href="#academy" class="hover:text-movon-blue transition-colors">Mini Academy</a>
+                <a href="#faq" class="hover:text-movon-blue transition-colors">FAQ</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#kalkulator" class="px-4 py-2.5 text-xs font-semibold text-white bg-slate-800 hover:bg-slate-700 rounded-xl transition border border-slate-700">
+                    <i class="fa-solid fa-calculator mr-2 text-movon-blue"></i>Kira Komisen
+                </a>
+                <a href="#daftar" class="px-5 py-2.5 text-xs font-bold text-white bg-movon-blue hover:bg-movon-hover rounded-xl shadow-lg shadow-movon-blue/25 transition transform active:scale-95">
+                    Daftar Ejen
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-2xl" aria-label="Buka Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-navy-card border-b border-slate-800 px-6 py-6 space-y-4">
+            <a href="#kelebihan" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Kenapa MOVON</a>
+            <a href="#produk" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Produk & Cara Jual</a>
+            <a href="#komisen" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Pelan Komisen & Insentif</a>
+            <a href="#kalkulator" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Kalkulator Komisen</a>
+            <a href="#academy" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Mini Academy Ejen</a>
+            <a href="#toolkit" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Toolkit Marketing</a>
+            <a href="#faq" class="mobile-link block text-base font-medium text-slate-200 hover:text-movon-blue">Soalan Lazim (FAQ)</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="#daftar" class="mobile-link text-center w-full py-3 font-bold text-white bg-movon-blue rounded-xl shadow-md">
+                    Daftar Ejen Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main>
+        
+        <!-- SECTION 4: HERO SECTION -->
+        <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+            <div class="absolute inset-0 bg-radial-gradient from-movon-blue/10 via-transparent to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-movon-blue/10 border border-movon-blue/30 text-movon-blue text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-graduation-cap"></i> Panduan Recruitment & Pembelajaran Ejen MOVON
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
+                            NAK BINA PENDAPATAN BERSAMA <span class="gradient-text">MOVON?</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+                            Belajar cara menjual produk Rent-to-Own, memahami pelan komisen telus, dan membina pasukan anda melalui satu panduan akademi lengkap untuk ejen MOVON Malaysia.
+                        </p>
+
+                        <!-- Key Benefits Bullet Points -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 max-w-xl mx-auto lg:mx-0 text-left">
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <i class="fa-solid fa-circle-check text-movon-blue text-lg"></i>
+                                <span class="text-xs font-medium text-slate-200">Pendaftaran Ejen Percuma*</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <i class="fa-solid fa-chalkboard-user text-movon-blue text-lg"></i>
+                                <span class="text-xs font-medium text-slate-200">Latihan & Bimbingan 1-to-1</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <i class="fa-solid fa-sack-dollar text-movon-blue text-lg"></i>
+                                <span class="text-xs font-medium text-slate-200">Potensi Income 4-5 Angka</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#daftar" class="w-full sm:w-auto px-8 py-4 bg-movon-blue hover:bg-movon-hover text-white font-bold rounded-xl shadow-xl shadow-movon-blue/30 transition transform hover:-translate-y-0.5 text-center">
+                                SAYA NAK JADI EJEN <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#kalkulator" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition text-center">
+                                <i class="fa-solid fa-calculator mr-2 text-movon-blue"></i> KIRA POTENSI KOMISEN
+                            </a>
+                            <a href="#academy" class="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-slate-900 text-slate-300 font-semibold rounded-xl border border-slate-800 transition text-center">
+                                TEROKA PANDUAN
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-movon-blue to-cyan-400 blur-xl opacity-30 animate-pulse"></div>
+                            
+                            <div class="relative rounded-2xl bg-navy-card border border-slate-700/80 p-6 shadow-2xl">
+                                <div class="relative h-64 sm:h-80 rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center">
+                                    <img src="https://placehold.co/600x450/0f2442/FFFFFF?text=MOVON+Product+Lineup+RTO" 
+                                         alt="Rangkaian Produk MOVON Malaysia" 
+                                         class="object-cover w-full h-full rounded-xl"
+                                         onerror="this.src='https://placehold.co/600x450/071426/FFFFFF?text=MOVON+Home+%26+Baby+Series'">
+                                    <div class="absolute top-3 right-3 bg-movon-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                        Pelan Rent-to-Own
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 space-y-3">
+                                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                                        <span class="text-xs text-slate-400 font-medium">Model Perniagaan</span>
+                                        <span class="text-xs font-bold text-slate-100">Rent-to-Own (RTO) + Direct Sales</span>
+                                    </div>
+                                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                                        <span class="text-xs text-slate-400 font-medium">Produk Utama</span>
+                                        <span class="text-xs font-bold text-movon-blue">DuoMate, ChillMate, Strollers</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs text-slate-400 font-medium">Kemaskini Pelan</span>
+                                        <span class="text-xs font-semibold text-emerald-400" id="heroLastUpdated">Kuatkuasa Q4 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: KENAPA MEMILIH MOVON? -->
+        <section id="kelebihan" class="py-20 bg-slate-950/50 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">KELEBIHAN PROGRAM EJEN</h2>
+                    <p class="text-3xl font-extrabold text-white">10 SULUR UTAMA MENGAPA MENYERTAI PASUKAN MOVON</p>
+                    <p class="text-slate-400 mt-3 text-sm">Ekosistem jualan moden yang dirangka khusus untuk kejayaan jangka panjang anda.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">1. Peluang Pendapatan Tinggi</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Jana pendapatan aktif melalui komisen jualan peribadi dan pasif melalui insentif kepimpinan pasukan mengikut prestasi jualan yang sah.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">2. Pendaftaran Tanpa Yuran</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Modal permulaan minimum. Tiada yuran tersembunyi untuk berdaftar sebagai ejen sah (tertakluk kepada kelulusan & syarat semasa).
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">3. Fleksibiliti Masa & Lokasi</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Boleh dijalankan secara sambilan (part-time) atau sepenuh masa (full-time) dari mana-mana sahaja di seluruh Malaysia.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">4. Produk Kategori Rumah & Bayi</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Pasaran luas meluas meliputi perkakas rumah tangga moden dan keperluan bayi berkualiti tinggi yang sentiasa ada permintaan.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-handshake font-bold"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">5. Pelan Rent-to-Own Mudah</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Memudahkan pelanggan memiliki produk idaman melalui bayaran ansuran bulanan yang berpatutan tanpa komitmen pukal.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">6. Bahan Pemasaran Disediakan</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Akses percuma kepada poster visual, video promosi, bahan iklan dan skrip jualan sedia guna di WhatsApp & media sosial.
+                        </p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">7. Latihan & Closing Skill</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Modul akademi komprehensif mengajar anda ilmu produk, teknik menangani bantahan, dan strategi jualan digital terkini.
+                        </p>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">8. Sokongan Pasukan Padu</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Sertai komuniti Telegram/WhatsApp ejen aktif, perkongsian pengalaman mentor, serta sesi konsultasi berkala.
+                        </p>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition">
+                        <div class="w-12 h-12 rounded-xl bg-movon-blue/10 flex items-center justify-center text-movon-blue text-xl mb-4">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">9. Sistem Operasi Teratur</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Proses pesanan pelanggan, status permohonan, penghantaran dan pemasangan diuruskan oleh pihak syarikat secara profesional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: PUSAT PRODUK MOVON -->
+        <section id="produk" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">KATALOG & SKRIP JUALAN</h2>
+                        <p class="text-3xl font-extrabold text-white">KATALOG PRODUK UTAMA MOVON</p>
+                    </div>
+                    <!-- Category Tabs Filter -->
+                    <div class="flex flex-wrap gap-2 mt-4 md:mt-0 bg-slate-900 p-1.5 rounded-xl border border-slate-800">
+                        <button onclick="filterProducts('all')" class="prod-tab tab-btn active px-4 py-2 rounded-lg text-xs font-bold transition">Semua</button>
+                        <button onclick="filterProducts('home')" class="prod-tab tab-btn px-4 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">Home Series</button>
+                        <button onclick="filterProducts('baby')" class="prod-tab tab-btn px-4 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">Baby Series</button>
+                        <button onclick="filterProducts('choice')" class="prod-tab tab-btn px-4 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">MOVON Choice</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Products will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CARA BISNES MOVON BERFUNGSI -->
+        <section class="py-20 bg-slate-950/60 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">ALUR KERJA EJEN</h2>
+                    <p class="text-3xl font-extrabold text-white">7 LANGKAH MUDAH BINA BISNES MOVON</p>
+                    <p class="text-slate-400 mt-2 text-sm">Daripada pendaftaran hingga pengiraan komisen jualan anda.</p>
+                </div>
+
+                <div class="relative">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Step 1 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">01</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 1: Daftar Ejen</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Hantar borang minat melalui saluran rasmi pasukan dan selesaikan pengesahan akaun ejen.</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">02</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 2: Sessi Pembelajaran</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Fahami ciri produk, pelan sewa Rent-to-Own, serta struktur komisen menerusi Mini Academy.</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">03</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 3: Cari Prospek</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Gunakan skrip WhatsApp, media sosial (FB/TikTok), dan iklan untuk menarik minat bakal pembeli.</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">04</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 4: Cadangkan Produk</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Kenal pasti keperluan pelanggan dan terangkan kelebihan pakej sewaan RTO atau beli terus.</p>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">05</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 5: Hantar Permohonan</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Bantu pelanggan melengkapkan dokumen permohonan mengikut prosedur penilaian syarikat.</p>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">06</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 6: Penghantaran</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Syarikat memproses permohonan, menguruskan logistik dan pemasangan produk di rumah pelanggan.</p>
+                        </div>
+
+                        <!-- Step 7 -->
+                        <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-movon-blue lg:col-span-2">
+                            <span class="text-3xl font-black text-movon-blue/40 absolute top-4 right-4">07</span>
+                            <h4 class="font-bold text-white text-base mb-2">Langkah 7: Terima Komisen & Insentif</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Pantau jualan layak (Net Sales) dan terima komisen serta bonus pengumpulan melalui portal rasmi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disclaimer Notice Box -->
+                <div class="mt-8 p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 flex items-start gap-3">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-400 text-base mt-0.5"></i>
+                    <p>Nota Penting: Permohonan pelanggan tertakluk kepada penilaian kelayakan kredit dan kelulusan pengurusan MOVON. Komisen dikira berdasarkan status <em>Net Sales</em> yang disahkan mengikut terma dan syarat pelan semasa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8 & 9: SEKSYEN PELAN KOMISEN & INSENTIF BERKALA Q4 2026 -->
+        <section id="komisen" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">STRUKTUR PENDAPATAN TELES</h2>
+                    <p class="text-3xl font-extrabold text-white">PELAN KOMISEN & INSENTIF STAR ADVISOR</p>
+                    <p class="text-slate-400 mt-2 text-sm">Kuat kuasa: 1 Oktober 2026 (Rujukan Pelan Standard & Kempen Q4)</p>
+                </div>
+
+                <!-- Interactive Tab Navigation for Commissions -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button onclick="switchCommTab('personal')" id="tab-personal" class="comm-tab tab-btn active px-5 py-2.5 rounded-xl text-xs font-bold transition">Personal Sales</button>
+                    <button onclick="switchCommTab('builder')" id="tab-builder" class="comm-tab tab-btn px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-slate-400 transition">Star Builder Incentive</button>
+                    <button onclick="switchCommTab('q4')" id="tab-q4" class="comm-tab tab-btn px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-slate-400 transition">Kempen Q4 2026 (Bonus)</button>
+                    <button onclick="switchCommTab('collection')" id="tab-collection" class="comm-tab tab-btn px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-slate-400 transition">Collection Commission</button>
+                </div>
+
+                <!-- Tab Content Containers -->
+                <!-- Tab 1: Personal Sales -->
+                <div id="content-personal" class="comm-content space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-2xl border-t-4 border-t-movon-blue">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-bold text-white text-lg">MOVON Space & Baby</h3>
+                                <span class="bg-movon-blue/20 text-movon-blue text-xs px-2.5 py-1 rounded-full font-bold">Rental</span>
+                            </div>
+                            <div class="text-3xl font-black text-white mb-2">RM 230 <span class="text-xs font-normal text-slate-400">/ unit</span></div>
+                            <p class="text-xs text-slate-300">Komisen asas untuk setiap jualan sewaan (Rent-to-Own) bagi kategori MOVON Space dan Baby Series.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-t-4 border-t-emerald-500">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-bold text-white text-lg">MOVON Space & Baby</h3>
+                                <span class="bg-emerald-500/20 text-emerald-400 text-xs px-2.5 py-1 rounded-full font-bold">Outright</span>
+                            </div>
+                            <div class="text-3xl font-black text-white mb-2">RM 280 <span class="text-xs font-normal text-slate-400">/ unit</span></div>
+                            <p class="text-xs text-slate-300">Komisen belian terus (outright purchase) untuk rangkaian produk MOVON Space & Baby.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-t-4 border-t-amber-500">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-bold text-white text-lg">MOVON Choice (CUCKOO)</h3>
+                                <span class="bg-amber-500/20 text-amber-400 text-xs px-2.5 py-1 rounded-full font-bold">Rental & Outright</span>
+                            </div>
+                            <div class="text-3xl font-black text-white mb-2">RM 100 <span class="text-xs font-normal text-slate-400">/ unit</span></div>
+                            <p class="text-xs text-slate-300">Komisen untuk produk perkongsian MOVON Choice (CUCKOO) mengikut kriteria program.</p>
+                        </div>
+                    </div>
+
+                    <!-- Vacuum Tier Table -->
+                    <div class="glass-card p-6 rounded-2xl overflow-hidden">
+                        <h4 class="font-bold text-white mb-4 text-base">MOVON Vacuum Series (Outright Tier Scale)</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm text-slate-300">
+                                <thead class="bg-slate-900 text-xs text-slate-400 uppercase">
+                                    <tr>
+                                        <th class="p-3">Jumlah Jualan Vacuum (Unit)</th>
+                                        <th class="p-3">Kadar Komisen Seunit</th>
+                                        <th class="p-3">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-800">
+                                    <tr>
+                                        <td class="p-3 font-semibold text-white">1 - 9 unit</td>
+                                        <td class="p-3 text-movon-blue font-bold">RM 300 / unit</td>
+                                        <td class="p-3 text-xs text-slate-400">Standard Tier</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-white">10 - 19 unit</td>
+                                        <td class="p-3 text-movon-blue font-bold">RM 320 / unit</td>
+                                        <td class="p-3 text-xs text-emerald-400">Silver Tier Boost</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-white">20+ unit dan ke atas</td>
+                                        <td class="p-3 text-movon-blue font-bold">RM 350 / unit</td>
+                                        <td class="p-3 text-xs text-amber-400 font-bold">Gold Tier Boost</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Star Builder Incentive -->
+                <div id="content-builder" class="comm-content hidden space-y-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                            <div>
+                                <h3 class="font-bold text-white text-xl">Star Builder Incentive (Pengumpulan Unit)</h3>
+                                <p class="text-xs text-slate-400 mt-1">Insentif prestasi pengumpulan jualan kumpulan/peribadi bulanan.</p>
+                            </div>
+                            <div class="bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs px-4 py-2 rounded-xl font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Syarat Kelayakan: Min. 5 Personal Net Sales
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium">10 Unit</span>
+                                <div class="text-2xl font-black text-movon-blue my-2">RM 500</div>
+                                <span class="text-[10px] text-slate-400">Bonus Terkumpul</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium">20 Unit</span>
+                                <div class="text-2xl font-black text-movon-blue my-2">RM 1,500</div>
+                                <span class="text-[10px] text-slate-400">Bonus Terkumpul</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium">30 Unit</span>
+                                <div class="text-2xl font-black text-movon-blue my-2">RM 3,000</div>
+                                <span class="text-[10px] text-slate-400">Bonus Terkumpul</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium">40 Unit</span>
+                                <div class="text-2xl font-black text-movon-blue my-2">RM 4,500</div>
+                                <span class="text-[10px] text-slate-400">Bonus Terkumpul</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center bg-gradient-to-b from-slate-900 to-movon-blue/10">
+                                <span class="text-xs text-amber-400 font-bold">50 Unit</span>
+                                <div class="text-2xl font-black text-amber-400 my-2">RM 6,000</div>
+                                <span class="text-[10px] text-amber-400/80 font-semibold">Maksimum Tier</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Q4 2026 Seasonal Campaigns -->
+                <div id="content-q4" class="comm-content hidden space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border border-movon-blue/40 relative overflow-hidden">
+                        <div class="absolute -right-12 -top-12 w-32 h-32 bg-movon-blue/20 rounded-full blur-2xl"></div>
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                            <div>
+                                <span class="bg-red-500/20 text-red-400 text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full mb-2 inline-block">KEMPEN MASA TERHAD</span>
+                                <h3 class="font-extrabold text-white text-xl">INSENTIF Q4 2026 (1 OKT - 31 DIS 2026)</h3>
+                            </div>
+                            <span class="text-xs text-slate-400 font-semibold">Tertakluk kepada terma & kelayakan kempen</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Momentum Duo -->
+                            <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+                                <h4 class="font-bold text-movon-blue text-sm mb-3">1. MOMENTUM DUO INCENTIVE</h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="flex justify-between border-b border-slate-800 pb-1"><span>10 unit kiraan layak:</span> <strong class="text-white">RM 1,000</strong></li>
+                                    <li class="flex justify-between border-b border-slate-800 pb-1"><span>20 unit kiraan layak:</span> <strong class="text-white">RM 3,000</strong></li>
+                                    <li class="flex justify-between border-b border-slate-800 pb-1"><span>30 unit kiraan layak:</span> <strong class="text-white">RM 4,000</strong></li>
+                                    <li class="flex justify-between border-b border-slate-800 pb-1"><span>40 unit kiraan layak:</span> <strong class="text-white">RM 5,000</strong></li>
+                                    <li class="flex justify-between text-amber-400 font-bold"><span>50 unit kiraan layak:</span> <span>RM 7,500</span></li>
+                                </ul>
+                                <p class="text-[11px] text-slate-400 mt-3">*Produk padanan MOVON + CUCKOO dikira 1.5 unit mengikut syarat kategori.</p>
+                            </div>
+
+                            <!-- Momentum Booster & Top Performers -->
+                            <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 space-y-4">
+                                <div>
+                                    <h4 class="font-bold text-movon-blue text-sm mb-2">2. MOMENTUM BOOSTER</h4>
+                                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                        <div class="bg-slate-950 p-2 rounded border border-slate-800">5 Unit<br><strong class="text-white">RM 1,200</strong></div>
+                                        <div class="bg-slate-950 p-2 rounded border border-slate-800">10 Unit<br><strong class="text-white">RM 1,800</strong></div>
+                                        <div class="bg-slate-950 p-2 rounded border border-slate-800">15 Unit<br><strong class="text-amber-400">RM 3,700</strong></div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2 border-t border-slate-800">
+                                    <h4 class="font-bold text-amber-400 text-xs mb-2">3. TOP 5 QUARTERLY PERFORMERS CASH REWARD</h4>
+                                    <div class="text-[11px] text-slate-300 grid grid-cols-2 gap-1">
+                                        <div>Top 1: <strong>RM 1,500</strong></div>
+                                        <div>Top 2: <strong>RM 1,000</strong></div>
+                                        <div>Top 3: <strong>RM 800</strong></div>
+                                        <div>Top 4 & 5: <strong>RM 500</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Collection Commission -->
+                <div id="content-collection" class="comm-content hidden space-y-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="font-bold text-white text-xl mb-3">Collection Commission (1.0%)</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed max-w-2xl">
+                            Ejen layak menerima komisen kutipan sebanyak <strong>1.0%</strong> berdasarkan kutipan bulanan sewaan yang berjaya dikutip daripada akaun pelanggan tajaan peribadi anda.
+                        </p>
+                        <div class="mt-4 p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-400 space-y-1">
+                            <p>• Layak berkuat kuasa mengikut terma pembayaran pelanggan yang tepat pada masanya.</p>
+                            <p>• Tertakluk kepada tempoh maksimum 12 bulan pertama pembayaran sewaan pelanggan.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 10 & 11: KALKULATOR KOMISEN INTERAKTIF -->
+        <section id="kalkulator" class="py-20 bg-slate-950/70 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">SIMULASI SIMPANAN & PENDAPATAN</h2>
+                    <p class="text-3xl font-extrabold text-white">KALKULATOR POTENSI KOMISEN EJEN</p>
+                    <p class="text-slate-400 mt-2 text-sm">Uji angka jualan anda untuk melihat anggaran pendapatan bulanan & bonus terkumpul.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- INPUT FORM PANEL -->
+                    <div class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-2xl space-y-6">
+                        <h3 class="text-lg font-bold text-white border-b border-slate-800 pb-3 flex items-center justify-between">
+                            <span>Input Jualan Anda</span>
+                            <button onclick="resetCalculator()" class="text-xs text-slate-400 hover:text-movon-blue font-normal">
+                                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Input
+                            </button>
+                        </h3>
+
+                        <!-- Input 1: Product Category Select -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Jenis Produk Utama</label>
+                            <select id="calcProdType" onchange="calculateCommissions()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                                <option value="MOVON_RENTAL">MOVON Space / Baby (Rental - RM230/unit)</option>
+                                <option value="MOVON_OUTRIGHT">MOVON Space / Baby (Outright - RM280/unit)</option>
+                                <option value="MOVON_VACUUM">MOVON Vacuum Series (Outright Tiered)</option>
+                                <option value="CUCKOO">MOVON Choice: CUCKOO (RM100/unit)</option>
+                            </select>
+                        </div>
+
+                        <!-- Input 2: Personal Sales Count -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-2">
+                                <span>Bilangan Personal Net Sales (Unit)</span>
+                                <span id="personalSalesVal" class="text-movon-blue font-bold text-sm">5 Unit</span>
+                            </div>
+                            <input type="range" id="calcPersonalSales" min="0" max="60" value="5" step="1" oninput="calculateCommissions()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-movon-blue">
+                        </div>
+
+                        <!-- Input 3: Group Sales Count -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-2">
+                                <span>Bilangan Jualan Kumpulan (Group Sales)</span>
+                                <span id="groupSalesVal" class="text-movon-blue font-bold text-sm">10 Unit</span>
+                            </div>
+                            <input type="range" id="calcGroupSales" min="0" max="100" value="10" step="1" oninput="calculateCommissions()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-movon-blue">
+                        </div>
+
+                        <!-- Input 4: Monthly Rental Collection Amount -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Anggaran Kutipan Sewa Layak Bulanan (RM)</label>
+                            <input type="number" id="calcCollectionAmt" value="0" placeholder="Contoh: 1500" oninput="calculateCommissions()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                        </div>
+
+                        <!-- Input 5: Campaign Toggle -->
+                        <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <div>
+                                <span class="text-xs font-bold text-white block">Sertakan Insentif Q4 2026?</span>
+                                <span class="text-[11px] text-slate-400">Termasuk Momentum Booster & Duo Incentive</span>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="calcIncludeQ4" checked onchange="calculateCommissions()" class="sr-only peer">
+                                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-movon-blue"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- OUTPUT DISPLAY PANEL -->
+                    <div class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-2xl border-2 border-movon-blue/30 relative">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs font-bold uppercase text-movon-blue tracking-wider">ANGGARAN PENDAPATAN BULANAN</span>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full">Kira Live</span>
+                        </div>
+
+                        <div class="text-center py-4 bg-slate-900/60 rounded-xl border border-slate-800 mb-6">
+                            <span class="text-xs text-slate-400 uppercase font-semibold block mb-1">JUMLAH ESTIMASI PENDAPATAN</span>
+                            <div id="outTotalIncome" class="text-4xl sm:text-5xl font-black text-white gradient-text">RM 0</div>
+                        </div>
+
+                        <!-- Breakdown List -->
+                        <div class="space-y-3 text-xs border-b border-slate-800 pb-6 mb-6">
+                            <div class="flex justify-between py-1.5 border-b border-slate-800/50">
+                                <span class="text-slate-400">Komisen Jualan Peribadi (Personal Sales):</span>
+                                <strong id="outPersonalComm" class="text-white">RM 0</strong>
+                            </div>
+                            <div class="flex justify-between py-1.5 border-b border-slate-800/50">
+                                <span class="text-slate-400">Star Builder Incentive (Group/Personal):</span>
+                                <strong id="outBuilderBonus" class="text-white">RM 0</strong>
+                            </div>
+                            <div class="flex justify-between py-1.5 border-b border-slate-800/50">
+                                <span class="text-slate-400">Insentif Berkala Q4 2026:</span>
+                                <strong id="outQ4Bonus" class="text-white">RM 0</strong>
+                            </div>
+                            <div class="flex justify-between py-1.5">
+                                <span class="text-slate-400">Collection Commission (1%):</span>
+                                <strong id="outCollectionComm" class="text-white">RM 0</strong>
+                            </div>
+                        </div>
+
+                        <!-- Next Target Progress Indicator -->
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 mb-6 space-y-2">
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span class="text-slate-300">Sasaran Tier Seterusnya:</span>
+                                <span id="outNextTargetText" class="text-movon-blue">Tambah 5 unit lagi</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div id="outProgressBar" class="bg-movon-blue h-full transition-all duration-500" style="width: 20%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="copySimulation()" class="py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-xs transition border border-slate-700">
+                                <i class="fa-regular fa-copy mr-1.5"></i> Salin Simulasi
+                            </button>
+                            <button onclick="shareSimulationWA()" class="py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs transition">
+                                <i class="fa-brands fa-whatsapp mr-1.5"></i> Hantar ke WhatsApp
+                            </button>
+                        </div>
+
+                        <p class="text-[10px] text-slate-500 mt-4 leading-relaxed text-center">
+                            *Ini ialah simulasi anggaran berdasarkan pelan dan syarat yang dipilih. Pendapatan sebenar bergantung pada jualan yang layak, prestasi, kutipan dan terma semasa MOVON. Ini bukan jaminan pendapatan.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- PRE-SETS EXAMPLES SECTION (Section 11) -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-blue-500">
+                        <span class="text-[10px] uppercase font-bold text-blue-400">CONTOH A</span>
+                        <h4 class="font-bold text-white text-sm my-1">5 Unit Rental MOVON</h4>
+                        <p class="text-xs text-slate-400">5 × RM230 (Comm) + RM1,200 (Q4 Booster) = <strong class="text-white">RM 2,350</strong></p>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-emerald-500">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400">CONTOH B</span>
+                        <h4 class="font-bold text-white text-sm my-1">10 Unit Rental MOVON</h4>
+                        <p class="text-xs text-slate-400">10 × RM230 + RM500 (Builder) + RM1,800 (Q4) = <strong class="text-white">RM 4,600</strong></p>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-amber-500">
+                        <span class="text-[10px] uppercase font-bold text-amber-400">CONTOH C</span>
+                        <h4 class="font-bold text-white text-sm my-1">4 MOVON + 4 CUCKOO</h4>
+                        <p class="text-xs text-slate-400">(4×RM230) + (4×RM100) + RM1,000 + RM1,200 = <strong class="text-white">RM 3,520</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 12: PANDUAN EJEN BAHARU — MINI ACADEMY -->
+        <section id="academy" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">PUSAT LATIHAN EJEN</h2>
+                    <p class="text-3xl font-extrabold text-white">MINI ACADEMY EJEN MOVON</p>
+                    <p class="text-slate-400 mt-2 text-sm">7 Modul Asas Untuk Membimbing Anda Dari Zero Ke Hero Sales.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Academy Module Selector List -->
+                    <div class="lg:col-span-4 space-y-2" id="moduleNavList">
+                        <!-- Navigation items generated by JS -->
+                    </div>
+
+                    <!-- Active Module Details Card -->
+                    <div class="lg:col-span-8 glass-card p-6 sm:p-8 rounded-2xl" id="moduleDetailCard">
+                        <!-- Content dynamic via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 13: TOOLKIT MARKETING INTERAKTIF -->
+        <section id="toolkit" class="py-20 bg-slate-950/60 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">ALAT BANTUAN JUALAN</h2>
+                    <p class="text-3xl font-extrabold text-white">TOOLKIT MARKETING INSTANT</p>
+                    <p class="text-slate-400 mt-2 text-sm">Jana skrip jualan, ayat promosi dan mesej recruitment dalam satu klik.</p>
+                </div>
+
+                <div class="glass-card p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto space-y-6">
+                    <!-- Template Category Selector -->
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <button onclick="loadTemplate('wa_intro')" class="tmpl-btn tab-btn active px-4 py-2 rounded-xl text-xs font-bold">Intro WhatsApp</button>
+                        <button onclick="loadTemplate('fb_caption')" class="tmpl-btn tab-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-400 bg-slate-900">FB Caption</button>
+                        <button onclick="loadTemplate('tiktok_idea')" class="tmpl-btn tab-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-400 bg-slate-900">Idea TikTok</button>
+                        <button onclick="loadTemplate('followup')" class="tmpl-btn tab-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-400 bg-slate-900">Follow-Up Prospek</button>
+                        <button onclick="loadTemplate('recruitment')" class="tmpl-btn tab-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-400 bg-slate-900">Ayat Rekrut Ejen</button>
+                    </div>
+
+                    <!-- Display Generated Script Box -->
+                    <div class="relative">
+                        <textarea id="templateOutput" rows="8" readonly class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-xs sm:text-sm text-slate-200 focus:outline-none font-mono leading-relaxed custom-scrollbar"></textarea>
+                        <button onclick="copyTemplateText()" class="absolute top-3 right-3 bg-movon-blue hover:bg-movon-hover text-white text-xs px-3 py-1.5 rounded-lg font-bold shadow transition">
+                            <i class="fa-regular fa-copy mr-1"></i> Salin Skrip
+                        </button>
+                    </div>
+
+                    <p class="text-[11px] text-slate-400 text-center">Gantikan teks pemegang seperti [Nama Anda] atau [Link Ejen] sebelum menghantar kepada pelanggan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 14: LALUAN KERJAYA EJEN MOVON -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">TANGGA KERJAYA</h2>
+                    <p class="text-3xl font-extrabold text-white">LALUAN KERJAYA & PERKEMBANGAN TEAM</p>
+                    <p class="text-slate-400 mt-2 text-sm">Bina kerjaya jangka panjang dari penasihat jualan hingga tahap pengurusan.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-slate-500">
+                        <div class="text-xs font-bold text-slate-400 mb-2">TAHAP 1</div>
+                        <h3 class="text-lg font-black text-white mb-2">Star Advisor</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Fokus kepada jualan peribadi, khidmat pelanggan, serta memahami selok-belok produk MOVON.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-movon-blue">
+                        <div class="text-xs font-bold text-movon-blue mb-2">TAHAP 2</div>
+                        <h3 class="text-lg font-black text-white mb-2">Star Manager</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Mula membina dan membimbing pasukan kecil ejen, melatih kemahiran jualan serta memantau KPI.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-purple-500">
+                        <div class="text-xs font-bold text-purple-400 mb-2">TAHAP 3</div>
+                        <h3 class="text-lg font-black text-white mb-2">Star Chief Manager</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Mengembangkan struktur agensi, mengendalikan latihan kepimpinan dan strategi jualan serantau.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-amber-400">
+                        <div class="text-xs font-bold text-amber-400 mb-2">TAHAP 4</div>
+                        <h3 class="text-lg font-black text-white mb-2">Star Elite Officer</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Tahap kepimpinan tertinggi dalam pengurusan agensi jualan dengan insentif kepimpinan khas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 15: FAQ INTERAKTIF -->
+        <section id="faq" class="py-20 bg-slate-950/60 border-y border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-movon-blue mb-2">SOALAN LAZIM</h2>
+                    <p class="text-3xl font-extrabold text-white">JAWAPAN KEPADA SOALAN ANDA</p>
+                </div>
+
+                <div class="space-y-4" id="faqAccordion">
+                    <!-- Accordions injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 18: BORANG PENDAFTARAN EJEN & WHATSAPP INTEGRATION -->
+        <section id="daftar" class="py-20 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card p-8 sm:p-12 rounded-3xl border border-movon-blue/40 shadow-2xl relative overflow-hidden">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <h2 class="text-3xl font-black text-white mb-3">BORANG MINAT SERTAI PASUKAN MOVON</h2>
+                        <p class="text-sm text-slate-300">Isi maklumat asas anda di bawah. Pasukan kami akan mengesahkan pendaftaran anda melalui WhatsApp.</p>
+                    </div>
+
+                    <form id="agentRegForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Nama Penuh *</label>
+                                <input type="text" id="formNama" required placeholder="Contoh: Ahmad Razali" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Nombor WhatsApp *</label>
+                                <input type="tel" id="formPhone" required placeholder="Contoh: 0123456789" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Negeri Kediaman *</label>
+                                <select id="formNegeri" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                                    <option value="">Pilih Negeri</option>
+                                    <option value="Selangor">Selangor</option>
+                                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                    <option value="Johor">Johor</option>
+                                    <option value="Penang">Pulau Pinang</option>
+                                    <option value="Perak">Perak</option>
+                                    <option value="Kedah">Kedah</option>
+                                    <option value="Melaka">Melaka</option>
+                                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                    <option value="Pahang">Pahang</option>
+                                    <option value="Kelantan">Kelantan</option>
+                                    <option value="Terengganu">Terengganu</option>
+                                    <option value="Sabah">Sabah</option>
+                                    <option value="Sarawak">Sarawak</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Pengalaman Berniaga</label>
+                                <select id="formStatus" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                                    <option value="Belum Pernah Berniaga">Belum Pernah Berniaga</option>
+                                    <option value="Ejen Sedia Ada (Brand Lain)">Ejen Sedia Ada (Jenama Lain)</option>
+                                    <option value="Usahawan / Peniaga">Usahawan / Peniaga</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Fokus Utama Anda</label>
+                            <select id="formMinat" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-movon-blue">
+                                <option value="Jualan Produk (Personal Sales)">Jualan Produk (Personal Sales)</option>
+                                <option value="Membina Team (Recruitment)">Membina Pasukan (Recruitment)</option>
+                                <option value="Kedua-duanya Sekali">Kedua-duanya Sekali</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-movon-blue hover:bg-movon-hover text-white font-bold rounded-xl shadow-xl shadow-movon-blue/30 transition text-sm uppercase tracking-wider">
+                            <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> HANTAR BORANG PENDAFTARAN VIA WHATSAPP
+                        </button>
+                    </form>
+
+                    <p class="text-[11px] text-slate-400 mt-4 text-center">
+                        *Nota: Borang ini ialah permintaan untuk dihubungi oleh pimpinan pasukan dan bukan pengesahan rasmi pendaftaran akaun HQ.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECTION 19: FOOTER & PENAFIAN HUKUM -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-xs text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-3">
+                    <span class="text-lg font-bold text-white block">MOVON AGENT ACADEMY</span>
+                    <p class="leading-relaxed">Platform panduan khas ejen untuk mempelajari produk, menyemak komisen dan sertai pasukan MOVON Malaysia.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-3">Pautan Pantas</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#kelebihan" class="hover:text-white">Kenapa MOVON</a></li>
+                        <li><a href="#produk" class="hover:text-white">Katalog Produk</a></li>
+                        <li><a href="#komisen" class="hover:text-white">Jadual Komisen</a></li>
+                        <li><a href="#kalkulator" class="hover:text-white">Kalkulator Pendapatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-3">Saluran Pasukan</h5>
+                    <p>Pengendali Pasukan: <strong class="text-white" id="footTeamName">MOVON Elite Squad</strong></p>
+                    <p class="mt-2">Tarikh Kemas Kini Pelan: <span class="text-white" id="footUpdated">1 Oktober 2026</span></p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-3">Penafian Hak Cipta</h5>
+                    <p class="leading-relaxed">Laman web ini dikendalikan secara bebas oleh agensi ejen sah dan bukannya laman web rasmi Ibu Pejabat MOVON Malaysia.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Legal Disclaimer Box -->
+            <div class="border-t border-slate-900 pt-6 text-[11px] leading-relaxed text-slate-500 space-y-2">
+                <p><strong>PENAFIAN PENDAPATAN & INSENTIF:</strong> Segala pengiraan komisen, contoh simulasi dan angka anggaran yang dipaparkan dalam website ini adalah untuk tujuan gambaran dan pembelajaran sahaja. Pendapatan sebenar setiap ejen tertakluk kepada jumlah jualan bersih yang disahkan (Net Sales), kelulusan permohonan pelanggan, kutipan bayaran serta terma & syarat rasmi yang dikuatkuasakan oleh MOVON Malaysia dari semasa ke semasa.</p>
+                <p>&copy; 2026 MOVON Agent Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SECTION 17: FLOATING CTA & MODALS -->
+
+    <!-- Floating WhatsApp Button -->
+    <a id="floatingWaBtn" href="#" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110" aria-label="Hubungi WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy-card/95 border-t border-slate-800 p-3 flex gap-2 backdrop-blur-md">
+        <a href="#kalkulator" class="flex-1 py-2.5 bg-slate-800 text-white text-xs font-bold rounded-xl text-center border border-slate-700">
+            <i class="fa-solid fa-calculator mr-1"></i> Kalkulator
+        </a>
+        <a href="#daftar" class="flex-1 py-2.5 bg-movon-blue text-white text-xs font-bold rounded-xl text-center shadow-lg">
+            Daftar Sekarang
+        </a>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="glass-card max-w-2xl w-full rounded-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto custom-scrollbar border border-slate-700">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalProductContent">
+                <!-- Modal Body JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed top-24 right-4 z-50 hidden bg-movon-blue text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 transition duration-300">
+        <i class="fa-solid fa-circle-check text-base"></i>
+        <span id="toastMsg">Notifikasi</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC ENGINE -->
+    <script>
+        // PRODUCTS DATA STORE
+        const PRODUCTS_DATA = [
+            {
+                id: 'duomate',
+                category: 'home',
+                name: 'MOVON DuoMate Washer Dryer',
+                image: 'https://placehold.co/400x300/0f2442/FFFFFF?text=DuoMate+Washer',
+                tagline: 'Mesin Basuh & Pengering Baju RTO',
+                problem: 'Masalah ruang ampain sempit & baju lambat kering waktu hujan.',
+                target: 'Keluarga bekerja, pemilik kondominium, ibu anak ramai.',
+                pitch: 'Mesin 2-in-1 jimat ruang dengan pakej sewaan mampu milik tanpa beli tunai.',
+                waScript: 'Hai! Kakak stress baju tak kering bila hujan? MOVON DuoMate kan ada. Boleh basuh & kering terus tanpa ampaian. Pelan sewa bulanan murah jer!'
+            },
+            {
+                id: 'chillmate',
+                category: 'home',
+                name: 'MOVON ChillMate Refrigerator',
+                image: 'https://placehold.co/400x300/0f2442/FFFFFF?text=ChillMate+Fridge',
+                tagline: 'Peti Sejuk Inverter Smart',
+                problem: 'Peti sejuk lama makan elektrik & ruang simpanan makanan terhad.',
+                target: 'Rumah baharu, keluarga bersaiz sederhana.',
+                pitch: 'Peti sejuk penjimatan tenaga tinggi dengan pembekuan pantas.',
+                waScript: 'Salam Sis! Peti ais lama dah rosak ke? Jom tukar kepada MOVON ChillMate. Bulanan serendah RM... waranti ditanggung sepenuhnya!'
+            },
+            {
+                id: 'snowmate',
+                category: 'home',
+                name: 'MOVON SnowMate Aircond',
+                image: 'https://placehold.co/400x300/0f2442/FFFFFF?text=SnowMate+Aircond',
+                tagline: 'Penyaman Udara Inverter Penjimat Tenaga',
+                problem: 'Cuaca panas terik & risau bil elektrik melambung.',
+                target: 'Pemilik rumah, bilik tidur utama, ruang tamu.',
+                pitch: 'Sejuk pantas dengan penapis udara teras dan bil bulanan yang terkawal.',
+                waScript: 'Panasnya cuaca sekarang kan? Pasang MOVON SnowMate kat bilik, baru selesa tidur malam. Ansuran bulanan pun sangat berbaloi!'
+            },
+            {
+                id: 'stroller',
+                category: 'baby',
+                name: 'MOVON Stroller Premium Series',
+                image: 'https://placehold.co/400x300/0f2442/FFFFFF?text=MOVON+Baby+Stroller',
+                tagline: 'Stroller Lipat Otomatik Mesra Travel',
+                problem: 'Stroller berat, sukar dilipat & memakan ruang bonet kereta.',
+                target: 'Ibu bapa muda, gemar melancong & outstation.',
+                pitch: 'Auto-fold satu tangan, ringan & rekabentuk moden yang sangat selesa.',
+                waScript: 'Hi Mommies! Nak stroller travel yang senang lipat sebelah tangan jer? MOVON Stroller memang trending sekarang. Jom tengok video ni!'
+            },
+            {
+                id: 'choice_cuckoo',
+                category: 'choice',
+                name: 'MOVON Choice (CUCKOO Collaboration)',
+                image: 'https://placehold.co/400x300/0f2442/FFFFFF?text=CUCKOO+Water+Purifier',
+                tagline: 'Penapis Air / Udara Terpilih',
+                problem: 'Air minuman tidak bersih & udara berhabuk di rumah.',
+                target: 'Isi rumah yang mementingkan kesihatan air & udara bersih.',
+                pitch: 'Kemudahan air bermineral serta-merta di rumah dengan servis berkala.',
+                waScript: 'Hai! Nak penapis air CUCKOO melalui pelan ejen MOVON? Dapatkan promosi pendaftaran mudah hari ini!'
+            }
+        ];
+
+        // MINI ACADEMY MODULES STORE
+        const ACADEMY_MODULES = [
+            {
+                id: 1,
+                title: 'Modul 1: Asas Perniagaan MOVON',
+                desc: 'Memahami ekosistem Rent-to-Own (RTO) dan perbezaan jualan Rental vs Outright.',
+                points: [
+                    'Apa itu Rent-to-Own: Memudahkan pelanggan memiliki barangan rumah melalui sewa bulanan.',
+                    'Perbezaan Rental & Outright: Komisen sewaan konsisten vs komisen beli terus.',
+                    'Istilah Penting: Net Sales, Customer Verification, Submission Approved.'
+                ]
+            },
+            {
+                id: 2,
+                title: 'Modul 2: Kenali Produk & Sasaran Pasaran',
+                desc: 'Cara memadankan masalah pelanggan dengan penyelesaian produk MOVON.',
+                points: [
+                    'Kenal pasti masalah pelanggan (Pain Points).',
+                    'Teknik perbandingan harga yang jujur dan profesional.',
+                    'Kelebihan waranti dan servis percuma sepanjang tempoh sewaan.'
+                ]
+            },
+            {
+                id: 3,
+                title: 'Modul 3: Strategi Cari Prospek (Leads)',
+                desc: 'Panduan mencari pelanggan percuma menerusi media sosial & WhatsApp.',
+                points: [
+                    'WhatsApp Status Strategy: Konsistensi posting harian.',
+                    'Facebook Organic Groups & Marketplace.',
+                    'TikTok Content: Video demonstrasi fungsi produk.'
+                ]
+            },
+            {
+                id: 4,
+                title: 'Modul 4: Skrip Closing WhatsApp',
+                desc: 'Teknik menjawab soalan prospek dan mengendali bantahan (Objections).',
+                points: [
+                    'Cara jawab bila pelanggan kata "Mahal".',
+                    'Skrip follow-up prospek hari ke-1 dan hari ke-3.',
+                    'Teknik dorongan permohonan cepat (Sense of Urgency).'
+                ]
+            },
+            {
+                id: 5,
+                title: 'Modul 5: Prosedur Permohonan & Sistem',
+                desc: 'Langkah pengemukaan dokumen permohonan pelanggan dengan betul.',
+                points: [
+                    'Dokumen diperlukan untuk permohonan sewaan.',
+                    'Cara menyemak status kelulusan dalam sistem.',
+                    'Proses penghantaran & pemasangan oleh pasukan logistik.'
+                ]
+            },
+            {
+                id: 6,
+                title: 'Modul 6: Memahami Pengiraan Komisen',
+                desc: 'Cara membaca slip komisen dan kelayakan insentif Star Builder.',
+                points: [
+                    'Syarat min 5 personal sales untuk layak insentif kumpulan.',
+                    'Jadual pengiraan tarikh potong komisen bulanan.',
+                    'Penjagaan Collection Commission 1%.'
+                ]
+            },
+            {
+                id: 7,
+                title: 'Modul 7: Bina Pasukan & Tangga Kerjaya',
+                desc: 'Panduan merekrut ejen baharu untuk naik ke tahap Star Manager.',
+                points: [
+                    'Kelebihan membina empayar agensi sendiri.',
+                    'Cara menggunakan landing page ini untuk recruitment.',
+                    'Sokongan latihan mingguan untuk ejen di bawah anda.'
+                ]
+            }
+        ];
+
+        // FAQ DATA STORE
+        const FAQ_DATA = [
+            {
+                q: 'Adakah pendaftaran ejen MOVON percuma?',
+                a: 'Ya, pendaftaran adalah percuma dan tiada yuran tersembunyi untuk menyertai program ejen (tertakluk kepada syarat kelulusan semasa).'
+            },
+            {
+                q: 'Adakah saya perlu membeli atau menyimpan stok barangan?',
+                a: 'Tidak perlu. Semua urusan stok, logistik, penghantaran dan pemasangan diuruskan sepenuhnya oleh HQ MOVON.'
+            },
+            {
+                q: 'Bolehkah saya menjalankan bisnes ini secara Part-Time?',
+                a: 'Sangat boleh! Ramai ejen kami terdiri daripada pekerja swasta, penjawat awam dan suri rumah yang melakukannya secara sambilan.'
+            },
+            {
+                q: 'Saya tiada pengalaman jualan. Adakah latihan disediakan?',
+                a: 'Ya! Melalui MOVON Agent Academy dan sokongan group WhatsApp/Telegram pasukan, anda akan dibimbing step-by-step.'
+            },
+            {
+                q: 'Bilakah komisen ejen dibayar?',
+                a: 'Komisen dibayar mengikut kitaran jadual pembayaran rasmi MOVON terus ke akaun bank anda bagi jualan yang telah disahkan (Net Sales).'
+            },
+            {
+                q: 'Apakah maksud Net Sales?',
+                a: 'Net Sales ialah jualan permohonan yang telah lulus penilaian kredit, disahkan dan produk berjaya dihantar/dipasang kepada pelanggan.'
+            }
+        ];
+
+        // APP STATE INITIALIZATION
+        let currentModuleIndex = 0;
+        let completedModules = JSON.parse(localStorage.getItem('movon_completed_mods') || '[]');
+
+        // WINDOW ONLOAD INITIALIZER
+        window.onload = function() {
+            // Apply Configuration to UI
+            document.getElementById('footTeamName').innerText = APP_CONFIG.TEAM_NAME;
+            document.getElementById('footUpdated').innerText = APP_CONFIG.LAST_UPDATED;
+            document.getElementById('heroLastUpdated').innerText = `Kuatkuasa ${APP_CONFIG.LAST_UPDATED}`;
+            document.getElementById('floatingWaBtn').href = `https://wa.me/${APP_CONFIG.WHATSAPP_NUMBER}?text=Hai,%20saya%20berminat%20nak%20tahu%20lanjut%20tentang%20ejen%20MOVON`;
+
+            // Mobile Menu Toggle Event
+            document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+                const drawer = document.getElementById('mobileDrawer');
+                drawer.classList.toggle('hidden');
+            });
+
+            // Close Mobile Drawer on Link Click
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobileDrawer').classList.add('hidden');
+                });
+            });
+
+            // Render Product Grid
+            renderProducts('all');
+
+            // Render Academy Modules
+            renderAcademyNav();
+            loadModuleDetail(0);
+
+            // Render FAQs
+            renderFAQs();
+
+            // Run Initial Commission Calculation
+            calculateCommissions();
+
+            // Load Default Toolkit Template
+            loadTemplate('wa_intro');
+        };
+
+        // PRODUCT RENDER & FILTERING
+        function renderProducts(category) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? PRODUCTS_DATA 
+                : PRODUCTS_DATA.filter(p => p.category === category);
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'glass-card p-5 rounded-2xl glass-card-hover flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-4 bg-slate-900">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+                            <span class="absolute top-2 left-2 bg-slate-950/80 text-movon-blue text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">
+                                ${p.category}
+                            </span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">${p.name}</h3>
+                        <p class="text-xs text-movon-blue font-semibold mb-3">${p.tagline}</p>
+                        <p class="text-xs text-slate-300 mb-4 line-clamp-2">${p.problem}</p>
+                    </div>
+                    <button onclick="openProductModal('${p.id}')" class="w-full py-2.5 bg-slate-800 hover:bg-movon-blue text-white font-bold rounded-xl text-xs transition border border-slate-700">
+                        <i class="fa-solid fa-book-open mr-1.5"></i> Lihat Cara Jual
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterProducts(cat) {
+            document.querySelectorAll('.prod-tab').forEach(btn => btn.classList.remove('active', 'bg-movon-blue', 'text-white'));
+            event.target.classList.add('active', 'bg-movon-blue', 'text-white');
+            renderProducts(cat);
+        }
+
+        function openProductModal(id) {
+            const prod = PRODUCTS_DATA.find(p => p.id === id);
+            if (!prod) return;
+
+            const modalContent = document.getElementById('modalProductContent');
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-xs font-bold text-movon-blue uppercase tracking-wider">Panduan Sales Produk</span>
+                    <h3 class="text-xl font-extrabold text-white">${prod.name}</h3>
+                    
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2 text-xs">
+                        <p><strong class="text-white">Masalah Pelanggan:</strong> <span class="text-slate-300">${prod.problem}</span></p>
+                        <p><strong class="text-white">Sasaran Pelanggan:</strong> <span class="text-slate-300">${prod.target}</span></p>
+                        <p><strong class="text-white">Cara Memperkenalkan:</strong> <span class="text-slate-300">${prod.pitch}</span></p>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-200 mb-2">Contoh Skrip WhatsApp Closing:</label>
+                        <div class="relative bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs font-mono text-slate-300">
+                            ${prod.waScript}
+                        </div>
+                    </div>
+
+                    <button onclick="copyToClipboard('${prod.waScript.replace(/'/g, "\\'")}')" class="w-full py-3 bg-movon-blue text-white font-bold rounded-xl text-xs">
+                        <i class="fa-regular fa-copy mr-1"></i> Salin Skrip WhatsApp Produk Ini
+                    </button>
+                </div>
+            `;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // TAB SWITCHING FOR COMMISSION SECTION
+        function switchCommTab(tabId) {
+            document.querySelectorAll('.comm-tab').forEach(b => b.classList.remove('active', 'bg-movon-blue', 'text-white'));
+            document.querySelectorAll('.comm-content').forEach(c => c.classList.add('hidden'));
+
+            document.getElementById(`tab-${tabId}`).classList.add('active', 'bg-movon-blue', 'text-white');
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+        }
+
+        // CALCULATOR ENGINE
+        function calculateCommissions() {
+            const prodType = document.getElementById('calcProdType').value;
+            const personalSales = parseInt(document.getElementById('calcPersonalSales').value) || 0;
+            const groupSales = parseInt(document.getElementById('calcGroupSales').value) || 0;
+            const collectionAmt = parseFloat(document.getElementById('calcCollectionAmt').value) || 0;
+            const includeQ4 = document.getElementById('calcIncludeQ4').checked;
+
+            // UI Update Labels
+            document.getElementById('personalSalesVal').innerText = `${personalSales} Unit`;
+            document.getElementById('groupSalesVal').innerText = `${groupSales} Unit`;
+
+            // 1. Calculate Personal Commission
+            let personalComm = 0;
+            if (prodType === 'MOVON_RENTAL') {
+                personalComm = personalSales * COMMISSION_RATES.RENTAL.MOVON;
+            } else if (prodType === 'MOVON_OUTRIGHT') {
+                personalComm = personalSales * COMMISSION_RATES.OUTRIGHT.MOVON;
+            } else if (prodType === 'CUCKOO') {
+                personalComm = personalSales * COMMISSION_RATES.RENTAL.CUCKOO;
+            } else if (prodType === 'MOVON_VACUUM') {
+                let rate = 300;
+                if (personalSales >= 20) rate = 350;
+                else if (personalSales >= 10) rate = 320;
+                personalComm = personalSales * rate;
+            }
+
+            // 2. Calculate Star Builder Incentive (Requires Min 5 Personal Sales)
+            let builderBonus = 0;
+            const totalUnitsForBuilder = personalSales + groupSales;
+            if (personalSales >= COMMISSION_RATES.MIN_PERSONAL_SALES_FOR_BUILDER) {
+                if (totalUnitsForBuilder >= 50) builderBonus = 6000;
+                else if (totalUnitsForBuilder >= 40) builderBonus = 4500;
+                else if (totalUnitsForBuilder >= 30) builderBonus = 3000;
+                else if (totalUnitsForBuilder >= 20) builderBonus = 1500;
+                else if (totalUnitsForBuilder >= 10) builderBonus = 500;
+            }
+
+            // 3. Calculate Q4 2026 Seasonal Bonus
+            let q4Bonus = 0;
+            if (includeQ4) {
+                // Booster calculation based on personal sales
+                let booster = 0;
+                if (personalSales >= 15) booster = 3700;
+                else if (personalSales >= 10) booster = 1800;
+                else if (personalSales >= 5) booster = 1200;
+
+                // Duo calculation based on total units
+                let duo = 0;
+                if (totalUnitsForBuilder >= 50) duo = 7500;
+                else if (totalUnitsForBuilder >= 40) duo = 5000;
+                else if (totalUnitsForBuilder >= 30) duo = 4000;
+                else if (totalUnitsForBuilder >= 20) duo = 3000;
+                else if (totalUnitsForBuilder >= 10) duo = 1000;
+
+                q4Bonus = booster + duo;
+            }
+
+            // 4. Calculate Collection Commission
+            const collectionComm = collectionAmt * COMMISSION_RATES.COLLECTION_COMMISSION_PCT;
+
+            // Total Income Sum
+            const totalIncome = personalComm + builderBonus + q4Bonus + collectionComm;
+
+            // Render Output Panel
+            document.getElementById('outTotalIncome').innerText = `RM ${totalIncome.toLocaleString()}`;
+            document.getElementById('outPersonalComm').innerText = `RM ${personalComm.toLocaleString()}`;
+            document.getElementById('outBuilderBonus').innerText = `RM ${builderBonus.toLocaleString()}`;
+            document.getElementById('outQ4Bonus').innerText = `RM ${q4Bonus.toLocaleString()}`;
+            document.getElementById('outCollectionComm').innerText = `RM ${collectionComm.toLocaleString()}`;
+
+            // Progress Bar & Next Target Logic
+            let nextTargetText = "Tier Maksimum Dicapai!";
+            let progressPct = 100;
+
+            if (personalSales < 5) {
+                nextTargetText = `Tambah ${5 - personalSales} personal sales lagi untuk buka Star Builder!`;
+                progressPct = (personalSales / 5) * 100;
+            } else if (totalUnitsForBuilder < 10) {
+                nextTargetText = `Tambah ${10 - totalUnitsForBuilder} unit lagi untuk Tier 10 Unit (RM500 Bonus)`;
+                progressPct = (totalUnitsForBuilder / 10) * 100;
+            } else if (totalUnitsForBuilder < 20) {
+                nextTargetText = `Tambah ${20 - totalUnitsForBuilder} unit lagi untuk Tier 20 Unit (RM1,500 Bonus)`;
+                progressPct = (totalUnitsForBuilder / 20) * 100;
+            } else if (totalUnitsForBuilder < 30) {
+                nextTargetText = `Tambah ${30 - totalUnitsForBuilder} unit lagi untuk Tier 30 Unit (RM3,000 Bonus)`;
+                progressPct = (totalUnitsForBuilder / 30) * 100;
+            } else if (totalUnitsForBuilder < 50) {
+                nextTargetText = `Tambah ${50 - totalUnitsForBuilder} unit lagi untuk Top Tier 50 Unit (RM6,000 Bonus)`;
+                progressPct = (totalUnitsForBuilder / 50) * 100;
+            }
+
+            document.getElementById('outNextTargetText').innerText = nextTargetText;
+            document.getElementById('outProgressBar').style.width = `${Math.min(progressPct, 100)}%`;
+        }
+
+        function resetCalculator() {
+            document.getElementById('calcPersonalSales').value = 5;
+            document.getElementById('calcGroupSales').value = 10;
+            document.getElementById('calcCollectionAmt').value = 0;
+            document.getElementById('calcIncludeQ4').checked = true;
+            calculateCommissions();
+            showToast('Kalkulator telah di-reset');
+        }
+
+        function getSimulationText() {
+            const total = document.getElementById('outTotalIncome').innerText;
+            const personal = document.getElementById('outPersonalComm').innerText;
+            const builder = document.getElementById('outBuilderBonus').innerText;
+            const q4 = document.getElementById('outQ4Bonus').innerText;
+            return `*SIMULASI POTENSI KOMISEN MOVON*\n------------------------------\nPersonal Sales Comm: ${personal}\nStar Builder Incentive: ${builder}\nInsentif Q4 2026: ${q4}\n------------------------------\n*JUMLAH ANGGARAN: ${total}*\n\nJom sertai pasukan MOVON! Klik link ini: ${window.location.href}`;
+        }
+
+        function copySimulation() {
+            copyToClipboard(getSimulationText());
+        }
+
+        function shareSimulationWA() {
+            const txt = encodeURIComponent(getSimulationText());
+            window.open(`https://wa.me/?text=${txt}`, '_blank');
+        }
+
+        // MINI ACADEMY ENGINE
+        function renderAcademyNav() {
+            const nav = document.getElementById('moduleNavList');
+            nav.innerHTML = '';
+            ACADEMY_MODULES.forEach((mod, idx) => {
+                const isDone = completedModules.includes(mod.id);
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left p-4 rounded-xl font-bold text-xs flex items-center justify-between border transition ${idx === currentModuleIndex ? 'bg-movon-blue text-white border-movon-blue' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`;
+                btn.onclick = () => loadModuleDetail(idx);
+                btn.innerHTML = `
+                    <span class="truncate pr-2">${mod.title}</span>
+                    ${isDone ? '<i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>' : '<i class="fa-regular fa-circle text-slate-600 text-sm"></i>'}
+                `;
+                nav.appendChild(btn);
+            });
+        }
+
+        function loadModuleDetail(idx) {
+            currentModuleIndex = idx;
+            renderAcademyNav();
+
+            const mod = ACADEMY_MODULES[idx];
+            const isDone = completedModules.includes(mod.id);
+            const card = document.getElementById('moduleDetailCard');
+
+            let pointsHTML = '';
+            mod.points.forEach(pt => {
+                pointsHTML += `<li class="flex items-start gap-2 text-xs text-slate-300"><i class="fa-solid fa-check text-movon-blue mt-0.5"></i> <span>${pt}</span></li>`;
+            });
+
+            card.innerHTML = `
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                        <span class="text-xs font-bold text-movon-blue uppercase">MODUL ${mod.id} / 7</span>
+                        <span class="text-xs text-slate-400">${isDone ? 'STATUS: SELESAI' : 'STATUS: BELUM SELESAI'}</span>
+                    </div>
+
+                    <h3 class="text-2xl font-black text-white">${mod.title}</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">${mod.desc}</p>
+
+                    <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800 space-y-3">
+                        <h4 class="text-xs font-bold text-white uppercase">Checklist Tindakan:</h4>
+                        <ul class="space-y-2.5">
+                            ${pointsHTML}
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                        <button onclick="toggleModuleComplete(${mod.id})" class="w-full sm:w-auto px-6 py-3 ${isDone ? 'bg-slate-800 text-slate-300' : 'bg-emerald-600 text-white'} font-bold rounded-xl text-xs transition">
+                            <i class="fa-solid ${isDone ? 'fa-rotate-left' : 'fa-check'} mr-1.5"></i> ${isDone ? 'Tanda Belum Selesai' : 'Tandakan Selesai Modul Ini'}
+                        </button>
+                        
+                        ${idx < ACADEMY_MODULES.length - 1 ? `
+                            <button onclick="loadModuleDetail(${idx + 1})" class="w-full sm:w-auto px-6 py-3 bg-movon-blue text-white font-bold rounded-xl text-xs transition">
+                                Modul Seterusnya <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleModuleComplete(modId) {
+            if (completedModules.includes(modId)) {
+                completedModules = completedModules.filter(id => id !== modId);
+            } else {
+                completedModules.push(modId);
+            }
+            localStorage.setItem('movon_completed_mods', JSON.stringify(completedModules));
+            loadModuleDetail(currentModuleIndex);
+            showToast('Progress pembelajaran dikemaskini');
+        }
+
+        // TOOLKIT TEMPLATES ENGINE
+        const TEMPLATES = {
+            wa_intro: `Hai [Nama Prospek], saya [Nama Anda] Ejen Sah MOVON Malaysia 👋\n\nSaya nak berkongsi peluang memiliki perkakas rumah moden (Mesin basuh/peti sejuk/aircond) secara Rent-to-Own tanpa komitmen pukal!\n\nBoleh saya tahu anda sedang mencari barangan rumah yang mana satu ya?`,
+            fb_caption: `RUMAH KEMAS, BAJU KERING TANPA AMBAIAN! 🧺✨\n\nTak perlu risau musim hujan lagi dengan MOVON DuoMate Washer Dryer. Sebulan cuma RM... jer!\n\n✅ Tanpa deposit tinggi\n✅ Free penghantaran & pemasangan\n✅ Waranti penuh sepanjang sewaan\n\nTekan link ini untuk pertanyaan: [Link WhatsApp Anda]`,
+            tiktok_idea: `[IDEA VIDEO TIKTOK]\nContent: "3 Sebab Kenapa Ramai Mak-Mak Tukar Ke MOVON DuoMate"\nVisual: Tunjukkan baju basah bertimbun -> Transisi ke mesin MOVON lipat baju terus kering -> Tunjukkan muka gembira.\nCall to Action: Link di bio untuk pendaftaran sewaan!`,
+            followup: `Salam [Nama Prospek] 😊\n\nSaya just nak follow-up tentang promosi MOVON yang kita bincangkan hari tu. Slot kuota sewaan percuma pemasangan bulan ini tinggal sedikit sahaja lagi.\n\nAdakah anda nak saya simpan satu unit untuk anda hari ini?`,
+            recruitment: `PELUANG BINA PENDAPATAN 4 ANGKA BERSAMA MOVON MALAYSIA 🚀\n\nSaya sedang mencari 5 orang ejen baharu untuk dibimbing secara langsung!\n\n✅ Pendaftaran Percuma\n✅ Bahan Marketing Disediakan\n✅ Komisen & Insentif Lumayan\n\nBerminat? Tekan link ini untuk sertai Mini Academy kami: [Link Landing Page]`
+        };
+
+        function loadTemplate(type) {
+            document.querySelectorAll('.tmpl-btn').forEach(b => b.classList.remove('active', 'bg-movon-blue', 'text-white'));
+            event.target.classList.add('active', 'bg-movon-blue', 'text-white');
+            document.getElementById('templateOutput').value = TEMPLATES[type] || '';
+        }
+
+        function copyTemplateText() {
+            const txt = document.getElementById('templateOutput').value;
+            copyToClipboard(txt);
+        }
+
+        // FAQ RENDER ENGINE
+        function renderFAQs() {
+            const container = document.getElementById('faqAccordion');
+            container.innerHTML = '';
+            FAQ_DATA.forEach((faq, idx) => {
+                const item = document.createElement('div');
+                item.className = 'glass-card rounded-2xl overflow-hidden border border-slate-800';
+                item.innerHTML = `
+                    <button onclick="toggleFaq(${idx})" class="w-full text-left p-5 text-sm font-bold text-white flex justify-between items-center">
+                        <span>${faq.q}</span>
+                        <i id="faq-icon-${idx}" class="fa-solid fa-chevron-down text-movon-blue transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-${idx}" class="hidden p-5 text-xs text-slate-300 border-t border-slate-800/60 leading-relaxed bg-slate-900/40">
+                        ${faq.a}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function toggleFaq(idx) {
+            const ans = document.getElementById(`faq-ans-${idx}`);
+            const icon = document.getElementById(`faq-icon-${idx}`);
+            ans.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // FORM SUBMISSION ENGINE
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const nama = document.getElementById('formNama').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const negeri = document.getElementById('formNegeri').value;
+            const status = document.getElementById('formStatus').value;
+            const minat = document.getElementById('formMinat').value;
+
+            const msg = `*PERMOHONAN PENDAFTARAN EJEN MOVON*\n----------------------------------\n*Nama:* ${nama}\n*No. Tel:* ${phone}\n*Negeri:* ${negeri}\n*Pengalaman:* ${status}\n*Fokus Minat:* ${minat}\n----------------------------------\nHai admin, saya berminat nak mendaftar ejen di bawah pasukan ${APP_CONFIG.TEAM_NAME}. Sila bimbing saya!`;
+
+            const waUrl = `https://wa.me/${APP_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+            window.open(waUrl, '_blank');
+            showToast('Membuka WhatsApp...');
+        }
+
+        // UTILITY FUNCTIONS
+        function copyToClipboard(text) {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            showToast('Teks berjaya disalin!');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
